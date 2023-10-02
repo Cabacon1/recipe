@@ -52,7 +52,7 @@ table {
 /* END RESET */
 
 /* fonts */
-h1, h2, h3, nav a, nav span, menu li, #social li, footer {
+h1, h2, h3, nav a, nav span, menu li, #social li, #about li, footer {
     font-family: 'Bebas Neue', sans-serif;
 }
 p, dd, li, nav, input{
@@ -82,11 +82,127 @@ header{
     display: none;
 }
 h1{
+    text-align: center;
     font-size: 40px;
 }
 h2{
     font-size: 30px;
+    text-align: center;
 }
 h3{
     font-size: 25;
+}
+a{
+    text-decoration: none;
+}
+ol{
+    list-style: decimal;
+    list-style-position: inside;
+}
+li{
+
+}
+/* Hamburger nav */
+#menu {
+    position: absolute;
+    top: 100%;
+    width: 80%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+}
+menu ul{
+    overflow: hidden;
+    position: relative;
+    display: block;
+    max-width: 100%;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+menu label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+input:checked~ul{
+    max-height: 600px;
+}
+menu li a img{
+    width: 50px;
+}
+menu h2 {
+    display: none;
+}
+menu input{
+    display: none;
+} 
+menu li{
+    background-color: #F2F2F2;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+    padding: 5px;
+}  
+menu li a{
+    display: block;
+    text-align: center;
+}
+/* a[href="#home"] {
+    display: inline-block;
+    position: fixed;
+    width: 50%;
+    top: 0;
+    right: 50%;
+    margin: 0 auto;
+    
+    background-color: aqua;
+} */
+
+/* About */
+#about{
+    padding-top: 200px;
+}
+#about ul{
+    display: grid;
+    padding: 20px 0;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    text-wrap: nowrap;
+}
+#about li{
+    text-align: center;
+    color: #EB5428;
+    
+}
+#about svg{
+    display: grid;
+    margin: 0 auto;
+}
+
+/* Ingredients */
+#ingredients li{
+    list-style-type: disc;
+    list-style-position: inside;
+    text-align: center;
+    
+}
+#menu{
+    display: block;
+    position: absolute;
+    top: 0;
+}
+img {
+    max-width: 331px;
+    height: auto;
+}
+footer{
+    background-color: #F2F2F2;
+}
+footer img{
+    display: block;
+    width: 150px;
+    margin: 0 auto;
 }
