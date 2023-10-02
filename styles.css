@@ -210,8 +210,6 @@ dt{
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(3,1fr);
     padding-top: 10px;
-    padding-bottom: ;
-    
 }
 .sides h3{
     grid-column: 2/4;
@@ -357,4 +355,36 @@ nav input{
 /* social */
 .social{
     grid-area: social;
+    text-align: center;
+    padding: 20px 0;
 }
+.social h2, .social h3{
+    display: none;
+}
+
+.social svg{
+    display: inline-block;
+}
+.social-links li{
+    display: inline-block;
+    margin: 0 auto;
+    width: 20%;
+}
+.social-links li a{
+    color: #EB5428;
+}
+/* .social-links li{
+    display: inline;
+}
+.social-links li a{
+    display: inline-block;
+    position: relative; 
+}
+*/
+/* .social-links {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.social-links li{
+    display: inline-block;
+} */
