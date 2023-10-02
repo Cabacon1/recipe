@@ -160,6 +160,7 @@ header p{
     grid-area: details;
 
     line-height: 1.5em;
+    padding: 10px;
 }
 dt{
     display: flex;
@@ -171,6 +172,7 @@ dt{
 .ingredients {
     grid-area: ingredients;
 
+    padding: 10px;
     line-height: 2em;
     text-align: left;
 }
@@ -182,6 +184,7 @@ dt{
 /* directions */
 .directions{
     grid-area: directions;
+    padding: 10px;
 
 }
 .directions ol{
@@ -199,37 +202,44 @@ dt{
     grid-area: sides;
 
     background-color: #7ABFBF;
+    padding: 20px;
     
 }
-
 .sides div {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr)
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    padding-top: 10px;
+    padding-bottom: ;
+    
 }
 .sides h3{
     grid-column: 2/4;
 }
-.sides figure{
-    grid-row: 1/4;
-    width: 150px;
-}
+
 .sides img{
-    display: block;
+    grid-column: 1/2;
+    grid-row: 1/5;
     width: 100px;
+    padding-right: 20px;
     justify-content: center;
 }
+.sides p{
+    grid-column: 2/-1;
 
-figurecaption, p{
-    float: right;
 }
 img {
     max-width: 414px;
     height: auto;
 }
-.checked{
-    color: orange;
+/* star rating */
+.fa-star{
+    color: #F2F2F2;
 }
+.checked{
+    color: #EB5428;
+}
+
 /* footer */
 footer{
     grid-area: footer;
