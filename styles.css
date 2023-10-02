@@ -50,7 +50,7 @@ table {
 /* End of reset */
 
 /* fonts */
-h1, h2, h3, nav a, nav span, menu li, #social li, #about li, footer {
+h1, h2, h3, nav a, nav span, menu li,.social-links a, #social li, #about li, footer, small {
     font-family: "Bebas Neue", sans-serif;
 }
 p, dd, li, nav, input{
@@ -58,7 +58,7 @@ p, dd, li, nav, input{
     font-size: 16px;
 }
 
-dt{
+dt, .rating {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     font-size: 16px;
@@ -238,16 +238,7 @@ img {
     color: #EB5428;
 }
 
-/* footer */
-footer{
-    grid-area: footer;
 
-    background-color: #F2F2F2;
-}
-footer img{
-    width: 150px;
-    margin: 0 auto;
-}
 /* NAV????????? Like why are you done here?  seems inconvenient  */
 
 .nav {
@@ -388,3 +379,20 @@ nav input{
 .social-links li{
     display: inline-block;
 } */
+/* footer */
+footer{
+    grid-area: footer;
+
+    display: grid;
+    background-color: #F2F2F2;
+    justify-content: center;
+    text-align: center;
+
+}
+footer img{
+    grid-row: 1/2;
+    justify-self: center;
+    align-items: center;
+    width: 175px;
+    padding-bottom: 20px;
+}
