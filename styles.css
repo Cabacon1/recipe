@@ -1,11 +1,9 @@
-/* Import Fonts */
-@import url(https://fonts.google.com/share?selection.family=Bebas%20Neue%7CMontserrat:ital,wght@0,400;0,700;1,400);
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap");
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -15,72 +13,94 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
+article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: "";
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
-/* END RESET */
+/* End of reset */
 
 /* fonts */
 h1, h2, h3, nav a, nav span, menu li, #social li, #about li, footer {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: "Bebas Neue", sans-serif;
 }
 p, dd, li, nav, input{
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
 }
 
 dt{
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: bold;
     font-size: 16px;
 }
-/* Start Custom */
-*{
-    box-sizing: border-box;
-}
-body{
-    max-width: 80%;
-    margin: 0 auto;
+
+/* Start Code*/
+html {
     background-color: rgba(122, 191, 191, .5);
+}
+body {
+    background-color: #F2F2F2;
+    max-width: 414px;
+    margin: 0 auto;
+    
+    display: grid;
+    /* grid-template-rows: repeat(9,100px); */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+                        "nav nav nav"
+                        "header header header"
+                        "details details details"
+                        "ingredients ingredients ingredients"
+                        "directions directions directions"
+                        "sides sides sides"
+                        "social social social"
+                        "footer footer footer";
 }
 main{
     background-color: #F2F2F2;
     margin: 0 auto;
 }
-header{
-    display: none;
+section{
+    display: grid;
 }
+header {
+    grid-area: header;
+    padding-top: 180px;
+}
+header img {
+    width: 100%;
+}
+
 h1{
     text-align: center;
     font-size: 40px;
@@ -90,7 +110,7 @@ h2{
     text-align: center;
 }
 h3{
-    font-size: 25;
+    font-size: 25px;
 }
 a{
     text-decoration: none;
@@ -99,115 +119,208 @@ ol{
     list-style: decimal;
     list-style-position: inside;
 }
-li{
+
+/* Menu I guess??? */
+menu {
+    grid-area: header; 
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-between;
+    list-style-type: none;
+}
+menu li {
+    display: grid;
+    padding: 1em;
+    justify-content: center;
+    font-weight: bold;
+    text-wrap: nowrap;
+}
+menu svg{
+    display: grid;
+    grid-row: 1/2;
+}
+menu li a{
+    display: grid;
+    text-align: center;
+    color: #EB5428;
+    justify-items: center;
+}
+header img{
+    grid-column: 1/5;
+}
+header p{
+    grid-column: 1/5;
+    padding: 10px 0;
+    line-height: 1.5em;
+}
+
+/* Details */
+.details {
+    grid-area: details;
+
+    line-height: 1.5em;
+}
+dt{
+    display: flex;
+    float: left;
+    padding-right: 1em;
+}
+
+/* Ingredients */
+.ingredients {
+    grid-area: ingredients;
+
+    line-height: 2em;
+    text-align: left;
+}
+.ingredients li{
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+/* directions */
+.directions{
+    grid-area: directions;
 
 }
-/* Hamburger nav */
-#menu {
-    display: grid;
-    position: absolute;
-    top: 100%;
-    width: 80%;
+.directions ol{
+    width: 90%;
+    margin: 0 auto;
+}
+.directions li{
+    list-style-position: outside;
+    margin-top: 1.5em;
+    line-height: 20px;
+}
+
+/* Sides */
+.sides{
+    grid-area: sides;
+
+    background-color: #7ABFBF;
+    
+}
+img {
+    max-width: 414px;
+    height: auto;
+}
+footer{
+    grid-area: footer;
+
+    background-color: #F2F2F2;
+}
+footer img{
+    width: 150px;
+    margin: 0 auto;
+}
+/* NAV????????? Like why are you done here?  seems inconvenient  */
+
+.nav {
+    grid-area: nav;
+
     height: 100px;
     background: #F2F2F2;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
-    z-index: 0;
+    align-items: center;
 }
-menu {
+nav{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(9, auto);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    z-index: 999;
 }
-a[href="#home"] {
-    position: relative;
-    width: 70%;
-    margin: 0 auto;
-    background-color: #EB5428;
+nav ul{
+    grid-column: 2/4;
+    grid-row: 1/2;
+    height: auto;
 }
-menu ul{
+nav ul ul{
     overflow: hidden;
-    background-color: #F2F2F2;
-    position: relative;
     display: block;
+    position: relative;
+    background-color: #F2F2F2;
     max-width: 100%;
     max-height: 0;
     transition: max-height .2s ease-out;
 }
-menu label {
+.nav label {
     cursor: pointer;
     grid-column: 1/2;
     grid-row: 1/2;
     padding: 28px 20px;
-    position: relative;
+    /* display: block;
+    position: relative; */
     user-select: none;
+    text-align: center;
 }
-input:checked~ul{
+
+.nav #home svg{
+    grid-column: 2/4;
+    grid-row: 1/2;
+    overflow-y: hidden;
+    text-overflow: clip;
+    width: 100%;
+    height: 100px;
+    background-color: #EB5428;
+}
+#home a{
+    color: transparent;
+}
+#home {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.nav #user svg{
+    justify-content: center;
+    align-content: center;
+}
+#user {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    box-shadow: none;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+}
+.nav li{
+    padding: 5px;
+    width: 100%;
+}  
+.nav li a {
+    width: 100%;
+    text-align: center;
+}
+input:checked~ul ul{
     max-height: 600px;
+    grid-column: 1/4;
+    width: 100%;
 }
-menu li a img{
+.nav li a img{
     width: 50px;
 }
-menu h2 {
+.nav h2 {
     display: none;
 }
-menu input{
+nav input{
     display: none;
 } 
-menu li{
-
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
-    padding: 5px;
-}  
-menu li a{
-    display: block;
-    text-align: center;
-}
-
-
-/* About */
-#about{
-    padding-top: 200px;
-}
-#about ul{
-    display: grid;
-    padding: 20px 0;
-    grid-template-columns: repeat(4,1fr);
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-    text-wrap: nowrap;
-}
-#about li{
-    text-align: center;
-    color: #EB5428;
-    
-}
-#about svg{
-    display: grid;
-    margin: 0 auto;
-}
-
-/* Ingredients */
-#ingredients li{
-    list-style-type: disc;
-    list-style-position: inside;
-    text-align: center;
-    
-}
-#menu{
-    display: block;
+.search {
     position: absolute;
-    top: 0;
-}
-img {
-    max-width: 331px;
-    height: auto;
-}
-footer{
-    background-color: #F2F2F2;
-}
-footer img{
-    display: block;
-    width: 150px;
+    top: 150px;
+    left: 180px;
+    display: flex;
     margin: 0 auto;
+}
+.search label{
+    display: none;
+}
+.nav div input , button{
+    border: #EB5428;
+    border-style: solid;
+}
+
+/* social */
+.social{
+    grid-area: social;
 }
