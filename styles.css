@@ -214,7 +214,9 @@ h1 {
     text-align: center;
     font-size: 40px;
 }
-
+.nav h2{
+    display: none;
+}
 h2 {
     font-size: 30px;
     text-align: center;
@@ -248,7 +250,6 @@ menu li {
     padding: 1em;
     justify-content: center;
     font-weight: bold;
-    text-wrap: nowrap;
 }
 
 menu svg {
@@ -646,7 +647,7 @@ footer img {
     .details {
         display: grid;
         justify-content: center;
-        text-wrap: nowrap;
+        /* text-wrap: nowrap; */
     }
 
     /* ingredients */
