@@ -4,19 +4,87 @@
 v2.0 | 20110126
 License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -24,41 +92,77 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
     list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
     quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: "";
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 /* End of reset */
 
 /* fonts */
-h1, h2, h3, nav a, nav span, menu li,.social-links a, #social li, #about li, footer, small {
+h1,
+h2,
+h3,
+nav a,
+nav span,
+menu li,
+.social-links a,
+#social li,
+#about li,
+footer,
+small {
     font-family: "Bebas Neue", sans-serif;
 }
-p, dd, li, nav, input{
+
+p,
+dd,
+li,
+nav,
+input {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
 }
 
-dt, .rating {
+dt,
+.rating {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     font-size: 16px;
@@ -68,67 +172,77 @@ dt, .rating {
 html {
     background-color: rgba(122, 191, 191, .5);
 }
+
 body {
     background-color: #F2F2F2;
     max-width: 414px;
     margin: 0 auto;
-    
+
     display: grid;
     /* grid-template-rows: repeat(9,100px); */
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-                        "nav nav nav"
-                        "header header header"
-                        "details details details"
-                        "ingredients ingredients ingredients"
-                        "directions directions directions"
-                        "sides sides sides"
-                        "social social social"
-                        "footer footer footer";
+    grid-template-areas:
+        "nav nav nav"
+        "header header header"
+        "details details details"
+        "ingredients ingredients ingredients"
+        "directions directions directions"
+        "sides sides sides"
+        "social social social"
+        "footer footer footer";
 }
-main{
+
+main {
     background-color: #F2F2F2;
     margin: 0 auto;
 }
-section{
+
+section {
     display: grid;
 }
+
 header {
     grid-area: header;
     padding-top: 120px;
 }
+
 header img {
     width: 100%;
 }
 
-h1{
+h1 {
     text-align: center;
     font-size: 40px;
 }
-h2{
+
+h2 {
     font-size: 30px;
     text-align: center;
 }
-h3{
+
+h3 {
     font-size: 25px;
 }
-a{
+
+a {
     text-decoration: none;
 }
-ol{
+
+ol {
     list-style: decimal;
     list-style-position: inside;
 }
 
 /* Menu I guess??? */
 menu {
-    grid-area: header; 
+    grid-area: header;
 
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
     list-style-type: none;
 }
+
 menu li {
     display: grid;
     padding: 1em;
@@ -136,20 +250,24 @@ menu li {
     font-weight: bold;
     text-wrap: nowrap;
 }
-menu svg{
+
+menu svg {
     display: grid;
     grid-row: 1/2;
 }
-menu li a{
+
+menu li a {
     display: grid;
     text-align: center;
     color: #EB5428;
     justify-items: center;
 }
-header img{
+
+header img {
     grid-column: 1/5;
 }
-header p{
+
+header p {
     grid-column: 1/5;
     padding: 10px 0;
     line-height: 1.5em;
@@ -162,7 +280,8 @@ header p{
     line-height: 1.5em;
     padding: 10px;
 }
-dt{
+
+dt {
     display: flex;
     float: left;
     padding-right: 1em;
@@ -176,65 +295,74 @@ dt{
     line-height: 2em;
     text-align: left;
 }
-.ingredients li{
+
+.ingredients li {
     list-style-type: disc;
     list-style-position: inside;
 }
 
 /* directions */
-.directions{
+.directions {
     grid-area: directions;
     padding: 10px;
 
 }
-.directions ol{
+
+.directions ol {
     width: 90%;
     margin: 0 auto;
 }
-.directions li{
+
+.directions li {
     list-style-position: outside;
     margin-top: 1.5em;
     line-height: 20px;
 }
 
 /* Sides */
-.sides{
+.sides {
     grid-area: sides;
 
     background-color: #7ABFBF;
     padding: 20px;
-    
+
 }
+
 .sides div {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     padding-top: 10px;
 }
-.sides h3{
+
+.sides h3 {
     grid-column: 2/4;
 }
 
-.sides img{
+.sides img {
     grid-column: 1/2;
     grid-row: 1/5;
     width: 100px;
     padding-right: 20px;
     justify-content: center;
 }
-.sides p{
+
+.sides p {
     grid-column: 2/-1;
 
 }
+
 img {
     max-width: 414px;
     height: auto;
 }
+
 /* star rating */
-.fa-star{
+.fa-star {
     color: #F2F2F2;
 }
-.checked{
+
+.checked {
     color: #EB5428;
 }
 
@@ -245,25 +373,28 @@ img {
     grid-area: nav;
 
     display: grid;
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(2, 1fr);
     height: 100px;
     background: #F2F2F2;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
     align-items: center;
 }
-nav{
+
+nav {
     grid-column: 1/2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     z-index: 999;
     align-items: center;
 }
-nav ul{
+
+nav ul {
     grid-column: 2/4;
     grid-row: 1/2;
     height: 100px;
 }
-nav ul ul{
+
+nav ul ul {
     overflow: hidden;
     position: relative;
     background-color: #F2F2F2;
@@ -271,6 +402,7 @@ nav ul ul{
     max-height: 0;
     transition: max-height .2s ease-out;
 }
+
 .nav label {
     cursor: pointer;
     grid-column: 1/2;
@@ -282,7 +414,7 @@ nav ul ul{
     text-align: center;
 }
 
-.nav #home svg{
+.nav #home svg {
     grid-column: 2/4;
     grid-row: 1/2;
     overflow-y: hidden;
@@ -291,18 +423,22 @@ nav ul ul{
     height: 100px;
     background-color: #EB5428;
 }
-#home a{
+
+#home a {
     color: transparent;
 }
+
 #home {
     margin: 0;
     padding: 0;
     text-align: center;
 }
-.nav #user svg{
+
+.nav #user svg {
     justify-content: center;
     align-content: center;
 }
+
 #user {
     grid-column: 4/5;
     grid-row: 1/2;
@@ -311,83 +447,84 @@ nav ul ul{
     list-style: none;
     text-align: center;
 }
-#user span{
+
+#user span {
     justify-items: center;
     align-self: center;
     text-align: center;
 }
-.nav li{
+
+.nav li {
     padding: 5px;
     width: 100%;
-}  
+}
+
 .nav li a {
     width: 100%;
     text-align: center;
 }
-input:checked~ul ul{
+
+input:checked~ul ul {
     max-height: 600px;
 
 }
-.nav li a img{
+
+.nav li a img {
     width: 50px;
 }
+
 .nav h2 {
     display: none;
 }
-nav input{
+
+nav input {
     display: none;
-} 
+}
+
 .search {
     position: relative;
     display: flex;
     margin: 0 auto;
 }
-.search label{
+
+.search label {
     display: none;
 }
-.nav div input , button{
+
+.nav div input,
+button {
     border: #EB5428;
     border-style: solid;
 }
 
 /* social */
-.social{
+.social {
     grid-area: social;
     text-align: center;
     padding: 20px 0;
 }
-.social h2, .social h3{
+
+.social h2,
+.social h3 {
     display: none;
 }
 
-.social svg{
+.social svg {
     display: inline-block;
 }
-.social-links li{
+
+.social-links li {
     display: inline-block;
     margin: 0 auto;
     width: 20%;
 }
-.social-links li a{
+
+.social-links li a {
     color: #EB5428;
 }
-/* .social-links li{
-    display: inline;
-}
-.social-links li a{
-    display: inline-block;
-    position: relative; 
-}
-*/
-/* .social-links {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-}
-.social-links li{
-    display: inline-block;
-} */
+
 /* footer */
-footer{
+footer {
     grid-area: footer;
 
     display: grid;
@@ -396,7 +533,8 @@ footer{
     text-align: center;
 
 }
-footer img{
+
+footer img {
     grid-row: 1/2;
     justify-self: center;
     align-items: center;
@@ -406,47 +544,129 @@ footer img{
 
 /* media 768 px*/
 @media screen and (min-width: 768px) {
-    body{
+    body {
         max-width: 768px;
+
+        display: grid;
+        /* grid-template-rows: repeat(9,100px); */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "nav nav nav nav"
+            "header header header header"
+            "details details details details"
+            "ingredients directions directions directions"
+            "ingredients directions directions directions"
+            "sides sides sides sides"
+            "footer footer social social"
+            "footer footer social social";
     }
-/* nav */
-    nav{grid-column: 1/8;
+
+
+    /* nav */
+    nav {
+        grid-column: 1/8;
         grid-row: 1/2;
         height: 100px;
-    
-        grid-template-columns:repeat(7, 1fr);
-        grid-template-rows: repeat(2,100px);
+
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(2, 100px);
     }
-    .nav label{
+
+    .nav label {
         display: none;
     }
-    
-    nav ul{
+
+    nav ul {
         grid-column: 1/2;
         grid-row: 1/2;
         width: fit-content;
     }
-    nav #hidden-menu {
 
-    }
-    nav #hidden-menu ul{
+    nav #hidden-menu ul {
         overflow: visible;
         list-style: none;
     }
-    #hidden-menu li{
+
+    #hidden-menu li {
         display: inline-block;
         position: relative;
         margin-right: 10px;
         width: 100%;
     }
-    .search{
+
+    .search {
         grid-column: 4/7;
         grid-row: 1/2;
     }
-    #user{
+
+    #user {
         grid-column: -2/-1;
         grid-row: 1/2;
-        justify-self: flex-end;    
-        text-align: center;    
+        justify-self: flex-end;
+        text-align: center;
+    }
+
+    /* I GIVE UP ON THE NAVBAR. NEVER HAD ISSUES WITH NAVBARS UNTIL THIS CLASSSSSSSS */
+    header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50px repeat(4, auto);
+    }
+
+    header h1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    header img {
+        grid-row: 2/3;
+        grid-column: 1/-1;
+        max-width: 100%;
+        z-index: 0;
+    }
+
+    header menu {
+        height: 88px;
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        z-index: 2;
+        background-color: rgba(255, 255, 255, 0.384);
+    }
+
+    header p {
+        padding: 20px;
+    }
+
+    /* Details */
+    .details {
+        display: grid;
+        justify-content: center;
+        text-wrap: nowrap;
+    }
+
+    /* ingredients */
+    .ingredients {
+        grid-area: ingredients;
+    }
+    /* directions */
+    .directions{
+        grid-area: directions;
+    }
+
+    /* sides */
+    .sides-grid{
+        display: grid;
+        grid-template-areas: 
+                        "one two"
+                        "three four";
+        gap: 5px;
+
+    }
+
+    /* footer and social */
+    footer, .social{
+        padding-top: 20px;
     }
 }
