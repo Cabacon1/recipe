@@ -244,24 +244,27 @@ img {
 .nav {
     grid-area: nav;
 
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
     height: 100px;
     background: #F2F2F2;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
     align-items: center;
 }
 nav{
+    grid-column: 1/2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     z-index: 999;
+    align-items: center;
 }
 nav ul{
     grid-column: 2/4;
     grid-row: 1/2;
-    height: auto;
+    height: 100px;
 }
 nav ul ul{
     overflow: hidden;
-    display: block;
     position: relative;
     background-color: #F2F2F2;
     max-width: 100%;
@@ -308,6 +311,11 @@ nav ul ul{
     list-style: none;
     text-align: center;
 }
+#user span{
+    justify-items: center;
+    align-self: center;
+    text-align: center;
+}
 .nav li{
     padding: 5px;
     width: 100%;
@@ -318,8 +326,7 @@ nav ul ul{
 }
 input:checked~ul ul{
     max-height: 600px;
-    grid-column: 1/4;
-    width: 100%;
+
 }
 .nav li a img{
     width: 50px;
@@ -395,4 +402,51 @@ footer img{
     align-items: center;
     width: 175px;
     padding-bottom: 20px;
+}
+
+/* media 768 px*/
+@media screen and (min-width: 768px) {
+    body{
+        max-width: 768px;
+    }
+/* nav */
+    nav{grid-column: 1/8;
+        grid-row: 1/2;
+        height: 100px;
+    
+        grid-template-columns:repeat(7, 1fr);
+        grid-template-rows: repeat(2,100px);
+    }
+    .nav label{
+        display: none;
+    }
+    
+    nav ul{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: fit-content;
+    }
+    nav #hidden-menu {
+
+    }
+    nav #hidden-menu ul{
+        overflow: visible;
+        list-style: none;
+    }
+    #hidden-menu li{
+        display: inline-block;
+        position: relative;
+        margin-right: 10px;
+        width: 100%;
+    }
+    .search{
+        grid-column: 4/7;
+        grid-row: 1/2;
+    }
+    #user{
+        grid-column: -2/-1;
+        grid-row: 1/2;
+        justify-self: flex-end;    
+        text-align: center;    
+    }
 }
