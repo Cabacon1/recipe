@@ -1,0 +1,885 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* End of reset */
+
+/* fonts */
+h1,
+h2,
+h3,
+nav a,
+nav span,
+menu li,
+.social-links a,
+#social li,
+#about li,
+footer,
+small {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+p,
+dd,
+li,
+nav,
+input {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+}
+
+dt,
+.rating {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Start Code*/
+html {
+    background-color: rgba(122, 191, 191, .5);
+}
+
+body {
+    background-color: #F2F2F2;
+    max-width: 414px;
+    margin: 0 auto;
+
+    display: grid;
+    /* grid-template-rows: repeat(9,100px); */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "nav nav nav"
+        "header header header"
+        "details details details"
+        "ingredients ingredients ingredients"
+        "directions directions directions"
+        "sides sides sides"
+        "social social social"
+        "footer footer footer";
+}
+
+main {
+    background-color: #F2F2F2;
+    margin: 0 auto;
+}
+
+section {
+    display: grid;
+}
+
+header {
+    grid-area: header;
+    padding-top: 120px;
+}
+
+header img {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol {
+    list-style: decimal;
+    list-style-position: inside;
+}
+
+/* Menu I guess??? */
+menu {
+    grid-area: header;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+menu li {
+    display: grid;
+    padding: 1em;
+    justify-content: center;
+    font-weight: bold;
+    text-wrap: nowrap;
+}
+
+menu svg {
+    display: grid;
+    grid-row: 1/2;
+}
+
+menu li a {
+    display: grid;
+    text-align: center;
+    color: #EB5428;
+    justify-items: center;
+}
+
+header img {
+    grid-column: 1/5;
+}
+
+header p {
+    grid-column: 1/5;
+    padding: 10px 0;
+    line-height: 1.5em;
+}
+
+/* Details */
+.details {
+    grid-area: details;
+
+    line-height: 1.5em;
+    padding: 10px;
+}
+
+dt {
+    display: inline-block;
+    padding-right: 1em;
+}
+
+dd {
+    display: inline;
+}
+
+/* Ingredients */
+.ingredients {
+    grid-area: ingredients;
+
+    padding: 10px;
+    line-height: 2em;
+    text-align: left;
+}
+
+.ingredients li {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+/* directions */
+.directions {
+    grid-area: directions;
+    padding: 10px;
+
+}
+
+.directions ol {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.directions li {
+    list-style-position: outside;
+    margin-top: 1.5em;
+    line-height: 20px;
+}
+
+/* Sides */
+.sides {
+    grid-area: sides;
+
+    background-color: #7ABFBF;
+    padding: 20px;
+
+}
+
+.sides div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding-top: 10px;
+}
+
+.sides h3 {
+    grid-column: 2/4;
+}
+
+.sides img {
+    grid-column: 1/2;
+    grid-row: 1/5;
+    width: 100px;
+    padding-right: 20px;
+    justify-content: center;
+}
+
+.sides p {
+    grid-column: 2/-1;
+
+}
+
+img {
+    max-width: 414px;
+    height: auto;
+}
+
+/* star rating */
+.fa-star {
+    color: #F2F2F2;
+}
+
+.checked {
+    color: #EB5428;
+}
+
+
+/* NAV????????? Like why are you done here?  seems inconvenient  */
+
+.nav{
+    grid-area: header;
+    width: 100%;
+    height: 100px;
+    grid-template-areas: 
+                    "a a a"
+                    "b b b"    ;
+}
+nav h2{
+    display: none;
+}
+nav {
+    grid-area: a;
+
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-areas: "a1 a2 a3";
+    align-items: center;
+    
+}
+.nav label {
+    cursor: pointer;
+    padding: 28px 20px;
+    display: block;
+    position: relative; 
+    user-select: none;
+    text-align: center;
+}
+nav #hidden-menu {
+    overflow: hidden;
+    position: relative;
+    background-color: #F2F2F2;
+    max-width: 100%;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+.nav #home svg {
+    overflow-y: hidden;
+    text-overflow: clip;
+    width: 100%;
+    height: 100px;
+    background-color: #EB5428;
+}
+.nav li a img {
+    width: 50px;
+}
+input:checked~#hidden-menu {
+    display: grid;
+    max-height: 600px;
+    overflow: visible;
+}
+.nav-item1 input {
+    display: none;
+}
+.nav-item1{
+    grid-area: a1;
+    display: grid;
+    color: #EB5428;
+    justify-self: center;
+}
+.nav-item1 span{
+    text-align: center;
+}
+.nav-item2{
+    grid-area: a2;
+}
+.nav-item3{
+    grid-area: a3;
+    display: grid;
+    fill: #EB5428;
+    justify-self: center; 
+}
+.nav-item3 span svg{
+    display: grid;
+    stroke: #EB5428;
+}
+.nav-item3 a{
+    color: #EB5428;   
+}
+.search{
+    grid-area: b;
+}
+.search {
+    display: flex;
+    margin: 0 auto;
+}
+
+.search label {
+    display: none;
+}
+
+.nav div input,
+button {
+    border: #EB5428;
+    border-style: solid;
+}
+
+
+/* social */
+.social {
+    grid-area: social;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social h2,
+.social h3 {
+    display: none;
+}
+
+.social svg {
+    display: inline-block;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 0 auto;
+    width: 20%;
+}
+
+.social-links li a {
+    color: #EB5428;
+}
+
+/* footer */
+footer {
+    grid-area: footer;
+
+    display: grid;
+    background-color: #F2F2F2;
+    justify-content: center;
+    text-align: center;
+
+}
+
+footer img {
+    grid-row: 1/2;
+    justify-self: center;
+    align-items: center;
+    width: 175px;
+    padding-bottom: 20px;
+}
+
+/* media 768 px*/
+@media screen and (min-width: 768px) {
+    body {
+        max-width: 768px;
+
+        display: grid;
+        /* grid-template-rows: repeat(9,100px); */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "nav nav nav nav"
+            "header header header header"
+            "details details details details"
+            "ingredients directions directions directions"
+            "ingredients directions directions directions"
+            "sides sides sides sides"
+            "footer footer social social"
+            "footer footer social social";
+    }
+
+
+    /* nav */
+    nav {
+        grid-column: 1/8;
+        grid-row: 1/2;
+        height: 100px;
+
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(2, 100px);
+    }
+
+    .nav label {
+        display: none;
+    }
+
+    nav ul {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: fit-content;
+    }
+
+    nav #hidden-menu ul {
+        overflow: visible;
+        list-style: none;
+    }
+
+    #hidden-menu li {
+        display: inline-block;
+        position: relative;
+        margin-right: 10px;
+        width: 100%;
+    }
+
+    .search {
+        grid-column: 4/7;
+        grid-row: 1/2;
+    }
+
+    #user {
+        grid-column: -2/-1;
+        grid-row: 1/2;
+        justify-self: flex-end;
+        text-align: center;
+    }
+
+    /* I GIVE UP ON THE NAVBAR. NEVER HAD ISSUES WITH NAVBARS UNTIL THIS CLASSSSSSSS */
+    header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50px repeat(4, auto);
+    }
+
+    header h1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    header img {
+        grid-row: 2/3;
+        grid-column: 1/-1;
+        max-width: 100%;
+        z-index: 0;
+    }
+
+    header menu {
+        height: 88px;
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        z-index: 2;
+        background-color: rgba(255, 255, 255, 0.384);
+    }
+
+    header p {
+        padding: 20px;
+    }
+
+    /* Details */
+    .details {
+        display: grid;
+        justify-content: center;
+        text-wrap: nowrap;
+    }
+
+    /* ingredients */
+    .ingredients {
+        grid-area: ingredients;
+    }
+
+    /* directions */
+    .directions {
+        grid-area: directions;
+    }
+
+    /* sides */
+    .sides-grid {
+        display: grid;
+        grid-template-areas:
+            "one two"
+            "three four";
+        gap: 5px;
+
+    }
+
+    /* footer and social */
+    footer,
+    .social {
+        padding-top: 20px;
+    }
+}
+
+/* Media Query 1280px */
+@media screen and (min-width: 1280px) {
+    body {
+        max-width: 1280px;
+        display: grid;
+        /* grid-template-rows: repeat(9,100px); */
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-areas:
+            "nav nav nav nav nav nav nav nav nav"
+            "header header header header header header header header header"
+            "details details details details details details details details details"
+            "ingredients ingredients directions directions directions directions directions directions directions"
+            "ingredients ingredients directions directions directions directions directions directions directions"
+            "sides sides sides sides sides sides sides sides sides"
+            "footer footer footer footer footer social social social social"
+            "footer footer footer footer footer social social social social";
+    }
+
+    /* LOL */
+    /* NAV */
+    .nav {
+        grid-area: nav;
+
+    }
+
+    nav {
+        grid: a;
+        display: grid;
+        grid-template-columns: 10% auto 10%;
+        grid-template-areas:
+            "a b c";
+    }
+
+    nav ul ul {
+        grid-area: b;
+        display: none;
+    }
+
+    .search {
+        grid-row: -1;
+        grid-column: 3/6;
+        text-align: center;
+        margin: 0 auto;
+        padding: 50px;
+    }
+
+    /* Header */
+    header {
+        padding-top: 150px;
+        grid-template-columns: 10% 40% repeat(2, 25%);
+        grid-template-rows: 88px repeat(3, auto);
+    }
+
+    header h1 {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        justify-self: center;
+    }
+
+    header menu {
+        grid-row: 2/4;
+        grid-column: 1/2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 90px) auto;
+        border-radius: 2px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: #EB5428;
+        height: auto;
+    }
+
+    header img {
+        grid-column: 2/3;
+        grid-row: 2/4;
+    }
+
+    header p {
+        grid-column: 3/-1;
+    }
+
+    /* Details */
+    .details {
+        max-width: 1280px;
+        background-color: #0D0D0D;
+        color: #7ABFBF;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 50px);
+    }
+
+    .details h2 {
+        grid-column: 2/5;
+    }
+
+    .details dl {
+        grid-row: 2/3;
+        grid-column: 1/-1;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "one two three four five";
+        align-content: space-around;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .details dt {
+        display: block;
+        text-align: center;
+    }
+
+    .details dd {
+        display: block;
+    }
+
+    /* Sides Grid */
+    .sides-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .sides h3 {
+        grid-column: 1/3;
+    }
+
+    .sides div {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+        padding-top: 10px;
+        justify-items: left;
+    }
+
+    .sides img {
+        width: 90%;
+        grid-column: 1/-1;
+        align-self: center;
+    }
+
+    .sides p {
+        grid-column: 1/-1;
+    }
+
+    footer {
+        display: grid;
+        grid-template-areas: "one two";
+        padding-left: 20px;
+        justify-content: left;
+    }
+
+    footer p {
+        grid-column: 2/-1;
+    }
+}
+
+/* Print Media */
+@media print {
+    
+    .header, .details, .directions, .ingredients, .sides, .social{
+        display: block;
+    }
+    body {
+        margin: 0.5in;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        max-width: fit-content;
+        text-align: left;
+        grid-template-areas: 
+                    "a a a a"
+                    "b c c e"
+                    "d d d d"
+                    "g g g g"
+                    "f f f f";
+                    background-color: #ffffff;
+    }
+    
+
+    header {
+        grid-area: a;
+        padding: 0;
+    }
+    h1{
+        font-size: 25px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 15px
+    }
+    .details{
+        grid-area: b;
+        padding: 0;
+    }
+    .ingredients{
+        grid-area: c;
+        line-height: 1.5em;
+        padding: 0;
+    }
+    menu{
+        display: none;
+    }
+    .directions{
+        grid-area: d;
+        padding: 0;
+    }
+    .directions li {
+        margin-top: 0;
+    }
+    .sides{
+        grid-area: e;
+        padding: 0;
+        background-color: #ffffff;
+    }
+    
+    .footer{
+        grid-area: f;
+    }
+    .social{
+        grid-area: g;
+    }
+
+    img {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+    }
+    .social svg {
+        display: none;
+    }
+    a:after {
+        content: " (" attr(href) ")";
+    }
+}
