@@ -418,7 +418,7 @@ nav #hidden-menu {
 .nav li a img {
     width: 50px;
 }
-input:checked~ nav #hidden-menu {
+input:checked~nav #hidden-menu ul{
     display: grid;
     max-height: 600px;
     overflow: visible;
@@ -556,6 +556,8 @@ footer img {
     nav {
         grid-area: a;
         display: grid;
+
+        grid-template-columns: 10% auto 20%;
         grid-template-areas: 
                         "a1 a2 a3";
     }
@@ -604,6 +606,7 @@ footer img {
     nav ul ul{
         overflow: visible;
         display: grid;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
     }
 
     /* I GIVE UP ON THE NAVBAR. NEVER HAD ISSUES WITH NAVBARS UNTIL THIS CLASSSSSSSS */
@@ -693,27 +696,47 @@ footer img {
 
     /* LOL */
     /* NAV */
-    .nav {
-        grid-area: nav;
-
+    .nav{
+    grid-area: nav;
+    width: 1280px;
+    
+    display: grid;
+    grid-template-areas: 
+                        "a"
+                        "b";
     }
-
-    nav {
-        grid: a;
+    nav{
+        grid-area: a;
+        width: 100%;
         display: grid;
         grid-template-columns: 10% auto 10%;
-        grid-template-areas:
-            "a b c";
+        grid-template-areas: "a1 a2 a3";
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
     }
-
-    nav ul ul {
-        grid-area: b;
-        display: none;
+    .nav-item2{
+        grid-area: a1;
+    }
+    .nav-item3{
+        grid-area: a3;
+    }
+    nav #hidden-menu ul{
+        background-color: #F2F2F2;
+        display: grid;
+        position: relative;
+        top:-100px;
+        left: 256px;
+        width: 768px;
+        height: 100px;
+        grid-template-rows: 1fr;
+        grid-template-columns: auto;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        box-shadow: none;
     }
 
     .search {
-        grid-row: -1;
-        grid-column: 3/6;
+        grid-area: b;
         text-align: center;
         margin: 0 auto;
         padding: 50px;

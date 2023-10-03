@@ -693,27 +693,46 @@ footer img {
 
     /* LOL */
     /* NAV */
-    .nav {
-        grid-area: nav;
-
+    .nav{
+    grid-area: nav;
+    width: 1280px;
+    
+    display: grid;
+    grid-template-areas: 
+                        "a"
+                        "b";
     }
-
-    nav {
-        grid: a;
+    nav{
+        grid-area: a;
+        width: 100%;
         display: grid;
         grid-template-columns: 10% auto 10%;
-        grid-template-areas:
-            "a b c";
+        grid-template-areas: "a1 a2 a3"; ;
+    }
+    .nav-item2{
+        grid-area: a1;
+    }
+    .nav-item3{
+        grid-area: a3;
+    }
+    nav #hidden-menu ul{
+        background-color: #F2F2F2;
+        display: grid;
+        position: relative;
+        top:-100px;
+        left: 256px;
+        width: 768px;
+        height: 100px;
+        grid-template-rows: 1fr;
+        grid-template-columns: auto;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
     }
 
-    nav ul ul {
-        grid-area: b;
-        display: none;
-    }
 
     .search {
-        grid-row: -1;
-        grid-column: 3/6;
+        grid-area: b;
         text-align: center;
         margin: 0 auto;
         padding: 50px;
