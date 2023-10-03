@@ -688,10 +688,34 @@ footer img {
         "sides sides sides sides sides sides sides sides sides"
         "footer footer footer footer footer social social social social"
         "footer footer footer footer footer social social social social";
+    }    /* LOL */
+    /* NAV */
+    .nav{
+        grid-area: nav;
+
     }
-    /* LOL */
+    nav {
+        grid: a;
+        display: grid;
+        grid-template-columns: 10% auto 10%;
+        grid-template-areas: 
+                        "a b c";
+    }
+    nav ul ul {
+        grid-area: b;
+        display: none;
+    }
+    .search {
+        grid-row: -1;
+        grid-column: 3/6;
+        text-align: center;
+        margin: 0 auto;
+        padding: 50px;
+    }
+
+/* Header */
     header{
-        padding-top: 200px;
+        padding-top: 150px;
         grid-template-columns: 10% 40% repeat(2,25%);
         grid-template-rows: 88px repeat(3,auto);
     }
@@ -774,5 +798,14 @@ footer img {
     }
     .sides p{
         grid-column: 1/-1;
+    }
+    footer{
+        display: grid;
+        grid-template-areas: "one two";
+        padding-left: 20px;
+        justify-content: left;
+    }
+    footer p{
+        grid-column: 2/-1;
     }
 }
