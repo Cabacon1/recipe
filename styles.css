@@ -300,7 +300,7 @@ dd {
 }
 
 .ingredients li {
-    list-style-type: disc;
+    list-style-type: square;
     list-style-position: inside;
 }
 
