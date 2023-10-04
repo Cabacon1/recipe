@@ -919,7 +919,15 @@ footer img {
     .social{
         grid-area: g;
     }
-
+    .social-links ul{
+        display: grid;
+        grid-template-areas: "1 2 3 4";
+        align-content: baseline;
+    }
+    .social-links ul li{
+        display: grid;
+        justify-content: center;
+    }
     img {
         display: none;
     }
