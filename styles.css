@@ -188,7 +188,6 @@ body {
         "ingredients ingredients ingredients"
         "directions directions directions"
         "sides sides sides"
-        "social social social"
         "footer footer footer";
 }
 
@@ -487,7 +486,6 @@ button {
 
 /* social */
 .social {
-    grid-area: social;
     text-align: center;
     padding: 20px 0;
 }
@@ -515,11 +513,10 @@ button {
 footer {
     grid-area: footer;
 
-    display: grid;
     background-color: #F2F2F2;
     justify-content: center;
     text-align: center;
-
+    justify-content: space-between;
 }
 
 footer img {
@@ -528,6 +525,9 @@ footer img {
     align-items: center;
     width: 175px;
     padding-bottom: 20px;
+}
+footer h3{
+    display: none;
 }
 
 /* media 768 px*/
@@ -545,8 +545,7 @@ footer img {
             "ingredients directions directions directions"
             "ingredients directions directions directions"
             "sides sides sides sides"
-            "footer footer social social"
-            "footer footer social social";
+            "footer footer footer footer"
     }
 
 
@@ -680,6 +679,19 @@ footer img {
     .social {
         padding-top: 20px;
     }
+    #footer{
+        grid-area: footer;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "a b";
+    }
+    #footer #copyright{
+        grid-area: a;
+    }
+    #footer .social{
+        grid-area: b;
+    }
+    
 }
 
 /* Media Query 1280px */
@@ -696,8 +708,8 @@ footer img {
             "ingredients ingredients directions directions directions directions directions directions directions"
             "ingredients ingredients directions directions directions directions directions directions directions"
             "sides sides sides sides sides sides sides sides sides"
-            "footer footer footer footer footer social social social social"
-            "footer footer footer footer footer social social social social";
+            "footer footer footer footer footer footer footer footer footer"
+;
     }
 
     /* LOL */
@@ -853,9 +865,21 @@ footer img {
         padding-left: 20px;
         justify-content: left;
     }
-
+    #footer #copyright{
+        display: grid;
+        grid-template-areas: 
+                        "a b "
+                        "a d ";
+                        justify-content: start;
+    }
+    #footer img{
+        grid-area: a;
+    }
+    #footer #copyright p{
+        grid-area: b;
+        justify-self: start
+    }
     footer p {
-        grid-column: 2/-1;
     }
 }
 
@@ -918,7 +942,7 @@ footer img {
         background-color: #ffffff;
     }
     
-    .footer{
+    #footer{
         grid-area: f;
     }
     .social{
