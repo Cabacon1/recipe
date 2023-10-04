@@ -203,7 +203,7 @@ section {
 
 header {
     grid-area: header;
-    padding-top: 120px;
+    padding-top: 200px;
 }
 
 header img {
@@ -469,14 +469,19 @@ input:checked~nav #hidden-menu ul{
     background-color: #EB5428;
 }
 
-.search label {
+fieldset {
     display: none;
+}
+form {
+    display: flex;
 }
 
 .nav div input,
 button {
     border: #EB5428;
     border-style: solid;
+    height: 58px;
+    align-self: center;
 }
 
 
