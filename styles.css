@@ -429,7 +429,7 @@ input:checked~nav #hidden-menu ul{
 .nav-item1{
     grid-area: a1;
     display: grid;
-    color: #EB5428;
+    color: #0D0D0D;
     justify-self: center;
 }
 .nav-item1 span{
@@ -604,7 +604,8 @@ footer h3{
     
     .search {
         grid-area: a;
-        height: 50px;
+        position: relative;
+        left: 70px;
         justify-self: end;
         align-self: center;
     }
